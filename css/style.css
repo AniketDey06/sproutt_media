@@ -991,7 +991,7 @@ footer{
     } */
 
     .about-wave{
-        bottom: -10px;
+        /* bottom: -10px; */
     }
 
     /* slider */
@@ -1047,6 +1047,9 @@ footer{
         width: 100%;
     }
 
+    .vid-box{
+        justify-content: center;
+    }
     /* campaign */
 
     .campaign{
