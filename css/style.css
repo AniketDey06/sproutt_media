@@ -935,7 +935,7 @@ footer{
     }
 
     .home{
-        height: 90vh;
+        height: 80vh;
         background-size: 600px;
         background-position: center top;
     }
@@ -947,7 +947,7 @@ footer{
     .home .col .row .mid{
         width: 100%;
         height: 0vh;
-        margin-top: 00px;
+        margin-top: 90px;
         /* display: flex;
         align-items: center;
         justify-content: space-between;
@@ -991,7 +991,17 @@ footer{
     } */
 
     .about-wave{
-        bottom: -6px;
+        /* bottom: -6px; */
+        display: none;
+    }
+
+    .about-top{
+        height: 10vh;
+        width: 100%;
+        background: url(../img/bg/about-bg-top.svg);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
     }
 
     /* slider */
@@ -1084,6 +1094,10 @@ footer{
     }
 
     .foot-col{
-        margin-bottom: 20px;
+        margin: 15px 0;
+    }
+
+    .foot-col .foot-item{
+        margin-top: 5px;
     }
 }
