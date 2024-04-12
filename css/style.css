@@ -856,8 +856,11 @@ footer{
     color: #92999b;
 } 
 
+.foot-col .foot-item p i{
+    font-size: 20px;
+}
 .foot-col .foot-item p span{
-    font-weight: 600;
+    margin-left: 5px;
 }
 
 .foot-col .foot-item p a{
@@ -1110,6 +1113,10 @@ footer{
     .form .form-item textarea{
         width: 100%;
         margin: 8px 0;
+    }
+
+    .cre-slider:hover .cre-slide-box{
+        animation-play-state: running;
     }
 
     /* footer */
