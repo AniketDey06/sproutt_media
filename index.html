@@ -874,19 +874,19 @@
                 </div>
 
                 <div class="camp-box">
-                    <form class="form">
+                    <form class="form" name="submit-to-google-sheet">
                         <div class="form-item">
                             <input type="text" name="FirstName" placeholder="*First Name" id="" required>
                             <input type="text" name="LastName" placeholder="*Last Name" id="" required>
                         </div>
                         <div class="form-item">
                             <input type="email" name="BusinessEmail" placeholder="*Business Email" id="" required>
-                            <input type="text" name="BusinessNumber" placeholder="*Contact Number" id="" required>
+                            <input type="number" class="inputNumber" name="BusinessNumber" placeholder="*Contact Number" id="" required>
                         </div>
 
                         <div class="form-item">
                             <input type="text" name="CompanyName" placeholder="*Company Name" id="" required>
-                            <input type="url" name="CompanyWebsite" placeholder="*Company Website" id="" required>
+                            <input type="url" name="CompanyWebsite" placeholder="*Company Website" id="">
                         </div>
 
                         <div class="form-item">
@@ -979,15 +979,15 @@
     </footer>
 
     <script>
-        const scriptURL = '<SCRIPT URL>'
-        const form = document.forms['submit-to-google-sheet']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7loaiMKfG_Q1tdNd2wQOBo4l3gRjZiNwa5jTLGQ_2oQw3y9_8rl2a8jtyr5HrpiH4IQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
       
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 
             .then(response =>{
-                setTimeout(function () {}, 5000)
+                setTimeout(function () {}, 1000)
                 form.reset()
             })
             .catch(error => console.error('Error!', error.message))
