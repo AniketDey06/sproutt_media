@@ -946,6 +946,10 @@ footer{
         align-items: center; 
     }
 
+    .nav img{
+        height: 35px;
+    }
+    
     .menu{
         display: block;
     }
