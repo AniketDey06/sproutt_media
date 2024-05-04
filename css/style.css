@@ -84,13 +84,13 @@ nav img{
 }
 
 .home{
-    height: 90.5vh;
+    height: 95vh;
     width: 100%;
-    background: url(../img/bg/home-bg.png);
+    background: url(../img/bg/home-bg.svg);
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: 900px ;
+    /* background-size: 100%; */
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
@@ -125,14 +125,19 @@ nav img{
     height: 70px;
 }
 .home .col .row .mid{
-    width: 400px;
-    height: 15vh;
-    margin-top: 300px;
+    /* width: 400px;
+    height: 15vh; */
+    /* margin-top: 300px; */
+    gap: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     z-index: 99;
+}
+
+.home .col .row .mid .brand-logo img{
+    height: 160px;
 }
 
 .home .col .row .mid .tagline p{
@@ -143,7 +148,7 @@ nav img{
 .btn-box{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .home .col .row .mid .btn{
     height: 50px;
@@ -994,9 +999,11 @@ footer{
     /* home */
 
     .home{
-        height: 70vh;
+        background: none;
+        height: 75vh;
+        /* height: 70vh;
         background-size: 600px;
-        background-position: center top;
+        background-position: center top; */
     }
 
     .home .col .row .sides{
@@ -1005,9 +1012,13 @@ footer{
 
     .home .col .row .mid{
         width: 100%;
-        height: 0vh;
-        margin-top: 90px;
+        /* height: 80vh; */
+        /* margin-top: 90px; */
         z-index: 99;
+    }
+    
+    .home .col .row .mid .brand-logo img{
+        height: 100px;
     }
 
     .tagline p{
