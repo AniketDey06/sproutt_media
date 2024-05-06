@@ -1,3 +1,6 @@
+console.log("Design and Developed By Aniket Dey.")
+console.log("https://aniketdey.netlify.app/")
+
 const menu = document.querySelector(".menu");
 const links = document.querySelector(".links");
 
