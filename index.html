@@ -902,7 +902,7 @@
                                 placeholder="*Describe what you're looking to achieve"></textarea>
                         </div>
 
-                        <div class="submit">
+                        <div class="submit" id="submit">
                             <input type="submit" value="Submit">
                         </div>
                     </form>
@@ -984,13 +984,17 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx7loaiMKfG_Q1tdNd2wQOBo4l3gRjZiNwa5jTLGQ_2oQw3y9_8rl2a8jtyr5HrpiH4IQ/exec';
         const form = document.forms['submit-to-google-sheet'];
+        const submit = document.getElementById("submit");
       
         form.addEventListener('submit', e => {
             e.preventDefault()
+            submit.disabled = true;
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 
             .then(response =>{
-                setTimeout(function () {}, 1000)
+                setTimeout(function () {
+                    submit.disabled = false;
+                }, 1000)
                 form.reset()
             })
             .catch(error => console.error('Error!', error.message))
